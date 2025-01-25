@@ -3,14 +3,17 @@
 import { signIn } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function SignIn() {
   const router = useRouter();
   const { data: session } = useSession();
 
-  if (session) {
-    router.push("/");
-  }
+  useEffect(() => {
+    if (session) {
+      router.push("/");
+    }
+  }, [session, router]);
 
   return (
     <>
@@ -22,13 +25,13 @@ export default function SignIn() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => signIn("google")}
-            className="bg-gray-200 hover:bg-gray-300 rounded-md p-3 "
+            className="bg-gray-200 hover:bg-gray-300 rounded-md p-3 text-slate-600 font-medium"
           >
             Se connecter via Google
           </button>
           <button
             onClick={() => signIn("github")}
-            className="bg-gray-200 hover:bg-gray-300 rounded-md p-3 "
+            className="bg-gray-200 hover:bg-gray-300 rounded-md p-3 text-slate-600 font-medium"
           >
             Se connecter via GitHub
           </button>
