@@ -3,18 +3,16 @@
 <br />
 <div align="center">
   <a href="https://github.com/Acrazie" target="_blank">
-    <img src="./public/images/ScreenShotPortfolio.png" alt="Logo">
+    <img src="./authspeedrun/public/ScreenShot.png" alt="Logo">
   </a>
 
-  <h3 align="center">Portfolio</h3>
+  <h3 align="center">Next Js Oauth</h3>
 
   <p align="center">
-    My Portfolio made with React + ThreeJS
+    My goal here was to speedrun the setup of an Oauth with Github and Google
     <br />
-    <a href="https://github.com/Acrazie/Portfolio"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Acrazie/AuthSpeedRun"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://mayeul-desbazeille.vercel.app/">View Site</a>
   </p>
 </div>
 
@@ -46,11 +44,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Avec ce projet, j'ai voulu d'une part exposer mes réalisations; montrer de quoi j'étais capable. Explorer la stack Three.js est l'autre part.Le projet a pris 1 à 2 semaines avec un travail journalier.
+Comme dit plus haut, je voulais Speedrun le setup d'un Oauth avec Google et Github.
 
-Le plus difficile a été ThreeJS et d'avoir une "clean archi" avec React, ce qui généralement est assez compliqué à mettre en place.
+Il a duré 30 - 1 heure, le plus compliqué a été le setup avec Google ce qui demande plus d'étapes et d'attention.
 
 J'espère que vous aimez ! 😀
+
+<div align="center">
+  
+![SpeedRun5GIF](https://github.com/user-attachments/assets/e2a2844c-8591-4d12-8771-b7dcb5aed300)
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -59,12 +62,18 @@ J'espère que vous aimez ! 😀
 ### Built With
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js" height="40" alt="javascript logo"  />
+  <img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="nextjs logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo"  />
   <img width="12" />
-  <img src="https://skillicons.dev/icons?i=threejs" height="40" alt="threejs logo"  />
+  <img src="https://skillicons.dev/icons?i=ts" height="40" alt="typescript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" height="40" alt="google logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo"  />
 </div>
+
+###
 
 ###
 
@@ -75,7 +84,7 @@ J'espère que vous aimez ! 😀
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Suivez le guide d'installation et tout ira bien :)
+Pour que l'Oauth marche soit en localhost ou bien en prod, il faut faire les modification des redirect URI en conséquences. 
 
 ### Prerequisites
 
@@ -85,13 +94,21 @@ Aucune action n’est prérequise pour cloner le repo sur votre machine !
 
 1. Clone the repo
    ```sh
-   git@github.com:Acrazie/Portfolio.git
+   git@github.com:Acrazie/AuthSpeedRun.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
-3. Start the project in dev mode
+3. Add .env and adds differents variables needed
+   ```sh
+   touch .env
+   ```
+4. Setup the credentials of Github and Google
+   - https://github.com/settings/apps
+   - https://console.cloud.google.com/
+   
+5. Start the project in dev mode
    ```sh
    npm run dev
    ```
