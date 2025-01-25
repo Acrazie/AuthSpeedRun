@@ -4,6 +4,7 @@ import { signIn } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import NavBar from "@/components/Navbar";
 
 export default function SignIn() {
   const router = useRouter();
@@ -17,6 +18,7 @@ export default function SignIn() {
 
   return (
     <>
+      <NavBar />
       <div className="max-w-[1000px] h-screen mx-auto  flex justify-center items-center flex-col gap-2">
         <h1 className="text-8xl uppercase font-black text-center mb-4">
           NEXT AUTH
